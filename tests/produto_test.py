@@ -17,6 +17,39 @@ class TestProduto(unittest.TestCase):
         self.assertIsInstance(p, Produto)
         
         
+    def test_if_codigo_field_is_int(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertIsInstance(p.codigo, int)
+        
+    def test_if_codigo_field_is_correct(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertEqual(p.codigo, 1)
+        
+        
+    def test_if_nome_field_is_str(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertIsInstance(p.nome, str)
+    
+    def test_if_nome_field_is_correct(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertEqual(p.nome, 'Arroz')
+        
+    def test_if_preco_field_is_float(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertIsInstance(p.preco, float)
+        
+    def test_if_preco_field_is_correct(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertEqual(p.preco, 5.0)
+        
+    def test_if_quantidade_field_is_int(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertIsInstance(p.quantidade, int)
+        
+    def test_if_quantidade_field_is_correct(self):
+        p = Produto(1, 'Arroz', 5.0, 10)
+        self.assertEqual(p.quantidade, 10)
+        
     def test_if_object_available_is_false_when_deactivated(self):
         p = Produto(1, 'Arroz', 5.0, 10)
         p.desativar()
